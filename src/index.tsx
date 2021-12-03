@@ -3,10 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CssBaseline } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
+
+const theme = createTheme({
+  typography: { fontFamily: 'Ubuntu' },
+  palette: {
+    primary: { main: '#000' },
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

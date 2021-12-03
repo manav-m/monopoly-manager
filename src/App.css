@@ -1,38 +1,263 @@
-.App {
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1e1e1e !important;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+#root {
+  width: 100%;
+  height: 80%;
+}
+
+.container {
+  height: 100%;
+}
+
+.grid-container {
+  height: 100%;
+}
+
+.grid-container-home {
+  background-color: #f8f8f8;
+  padding: 0 !important;
+  min-height: 100%;
+  width: 40%;
+  padding: 20px !important;
+}
+
+.inner-container {
+  border: solid 1px #232427;
+  min-height: 100%;
+  position: relative;
+}
+
+.header-container {
+  margin: 16px;
+  background-color: #a4cddf;
+  border: solid 3px #232427;
+  text-align: center;
+  padding: 16px;
+}
+
+.heading {
+  font-size: 13px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 17px !important;
+  letter-spacing: 0.24em !important;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 21px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 27px !important;
+  letter-spacing: 0.04em !important;
+  text-align: center;
+
+  margin-top: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-body {
+  margin: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.starting-money-label {
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 23px !important;
+  letter-spacing: 0em !important;
+  text-align: left;
+}
+
+.starting-money-input {
+  float: right;
+}
+
+#start-button {
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 23px !important;
+  letter-spacing: 0em !important;
+  text-align: center;
+
+  background-color: #a4cddf;
+  border-top: solid 1px #232427;
+  text-align: center;
+  border-radius: 0;
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  bottom: 0;
+}
+
+.app-bar {
+  display: block !important;
+  position: absolute !important;
+  top: 0;
+  height: 48px;
+  padding: 16px 24px;
+}
+
+.app-bar-title {
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+  text-align: left;
+
+  float: left;
+}
+
+.app-bar-logout {
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  letter-spacing: 0em !important;
+  text-align: right;
+
+  color: #f8aeb8;
+  float: right;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-bar-logout-icon {
+  font-size: 16px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-bar-logout-text {
+  margin-left: 4px;
+}
+
+.app-container {
+  padding: 80px 40px;
+}
+
+.app-main {
+  border: 3px solid #000;
+  margin: 0;
+  position: relative;
+}
+
+.swap-button {
+  position: absolute !important;
+  width: 56px;
+  height: 56px;
+  background-color: white !important;
+  border: 3px solid #000 !important;
+  border-radius: 100%;
+  top: 12px;
+  left: 30.83%;
+  color: black !important;
+}
+
+.column-title {
+  font-size: 21px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 27px !important;
+  letter-spacing: 0.04em !important;
+  text-align: center;
+
+  height: 80px;
+  background: #a4cddf;
+  text-align: center;
+  display: flex;
+}
+
+.column-title-mid {
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+}
+
+.column-main {
+  background-color: #f8f8f8;
+  border-top: 3px solid #000;
+  height: 100%;
+}
+
+.column-main-mid {
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+}
+
+.player-list {
+  padding: 0;
+}
+
+.player-list-item {
+  padding: 8px 16px;
+  margin: 0 !important;
+  cursor: pointer;
+  display: flex;
+}
+
+.highlight-from {
+  background-color: #d2483b;
+}
+
+.highlight-to {
+  background-color: #479859;
+}
+
+.index,
+.name,
+.cash {
+  padding: 0 !important;
+  display: flex;
+}
+
+.cash {
+  text-align: end !important;
+}
+
+.input-container {
+  margin: 16px;
+}
+
+.suggestion-list {
+  margin: 0 16px;
+  display: flex;
+  grid-gap: 8px;
+}
+
+.transfer-button-container {
+  padding: 20px 16px 0;
+}
+
+.transfer-button {
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 23px !important;
+  letter-spacing: 0em !important;
+  text-align: center;
+
+  background-color: #a4cddf !important;
+  height: 56px;
+  width: 100%;
+  border: 2px solid #232427 !important;
+  border-radius: 0 !important;
 }
