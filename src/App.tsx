@@ -18,7 +18,7 @@ import './App.css';
 import { Logout } from '@mui/icons-material';
 
 const DEFAULT_STARTING_CASH = 1500;
-const MAX_PLAYER_COUNT = 15;
+const MAX_PLAYER_COUNT = 8;
 
 const defaultState = {
   players: [
@@ -128,6 +128,12 @@ function App() {
     setGameState(
       produce(gameState, draft => {
         draft.players.forEach(player => (player.cash = DEFAULT_STARTING_CASH));
+        draft.players.push({
+          id: nanoid(),
+          name: '',
+          cash: DEFAULT_STARTING_CASH,
+          new: true,
+        });
         draft.state = STATES.INIT;
       })
     );
